@@ -20,41 +20,38 @@ body {
   margin: 5rem;
 }
 .assignment__header h2 {
-  font-size: 2rem;
+  font-family: "Boogaloo", cursive;
+  font-size: 3.5rem;
   text-transform: uppercase;
   color: #686de0;
 }
 
-.test-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
 .testimonial {
+  width: 95%;
+  margin: 0 auto;
   font-family: "Manrope", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 40%;
   height: auto;
   border-radius: 20px;
   align-items: center;
   background-color: #fff;
   font-size: 1.4rem;
+  overflow: hidden;
 }
 .testimonial__header {
   text-align: justify;
-  padding: 4rem 4rem 6rem 4rem;
+  padding: 4rem 3rem 6rem 3rem;
   line-height: 2;
 }
 .testimonial__header span {
   font-size: 2.2rem;
 }
 .testimonial__footer {
+  margin-top: 2rem;
   width: 100%;
   background-color: #686de0;
-  border-radius: 0 0 20px 20px;
-  padding: 8rem 0 2rem 0;
   position: relative;
 }
 .testimonial__footer #photo-me {
@@ -69,6 +66,7 @@ body {
 }
 .testimonial__text {
   text-align: center;
+  padding: 7rem 0 2rem 0;
 }
 .testimonial__text h3 {
   text-transform: uppercase;
@@ -82,7 +80,7 @@ body {
 }
 
 .--shadow {
-  box-shadow: 0px 5px 20px rgb(97, 88, 88);
+  box-shadow: 0px 5px 20px rgb(125, 122, 122);
 }
 
 #first-part {
@@ -90,5 +88,36 @@ body {
 }
 
 .grid {
-  background-color: yellow;
+  background-color: #686de0;
+}
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid__item {
+  border: 2px solid black;
+  margin: 0 auto;
+}
+
+.grid__item > img {
+  border: 2px solid green;
+  width: 25rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .grid__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "foto1 foto2" "foto3 foto4" "foto5 foto6" "foto7";
+  }
+}
+@media screen and (min-width: 320px) {
+  .testimonial {
+    max-width: 500px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .grid__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "foto1 foto2 foto3" "foto4 foto5 foto6" "foto7";
+  }
 }/*# sourceMappingURL=style.css.map */

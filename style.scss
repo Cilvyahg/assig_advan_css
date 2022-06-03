@@ -3,13 +3,13 @@
 // ===================
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Merriweather:wght@300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
 // variables
 
 $primary-font: "Manrope", sans-serif;
 $heading-clr: #686de0;
 $span-font-big: 2.2rem;
-$font-boogaloo: 'Boogaloo', cursive;
+$font-boogaloo: "Boogaloo", cursive;
 
 * {
   margin: 0;
@@ -36,33 +36,31 @@ body {
   margin: 5rem;
 
   h2 {
-    font-size: 2rem;
+    font-family: $font-boogaloo;
+    font-size: 3.5rem;
     text-transform: uppercase;
     color: $heading-clr;
   }
 }
 
 //TESTIMONIAL
-
-.test-wrapper {
-  display: flex;
-  justify-content: center;
-}
 .testimonial {
+  width: 95%;
+  margin: 0 auto;
   font-family: $primary-font;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 40%;
   height: auto;
   border-radius: 20px;
   align-items: center;
   background-color: #fff;
   font-size: 1.4rem;
+  overflow: hidden;
 
   &__header {
     text-align: justify;
-    padding: 4rem 4rem 6rem 4rem;
+    padding: 4rem 3rem 6rem 3rem;
     line-height: 2;
 
     & span {
@@ -71,10 +69,9 @@ body {
   }
 
   &__footer {
+    margin-top: 2rem;
     width: 100%;
     background-color: $heading-clr;
-    border-radius: 0 0 20px 20px;
-    padding: 8rem 0 2rem 0;
     position: relative;
 
     & #photo-me {
@@ -86,11 +83,13 @@ body {
       transform: translate(-50%, -50%);
       width: 12rem;
       height: auto;
+      // object-position: center;
     }
   }
 
   &__text {
     text-align: center;
+    padding: 7rem 0 2rem 0;
 
     h3 {
       text-transform: uppercase;
@@ -101,23 +100,65 @@ body {
     }
     span {
       color: white;
-     
     }
   }
 }
+
 .--shadow {
-    box-shadow: 0px 5px 20px rgb(97, 88, 88);
+  box-shadow: 0px 5px 20px rgb(125, 122, 122);
+}
+
+#first-part {
+  margin-bottom: 10rem;
+}
+
+// OPDRACHT 2.
+
+.grid {
+  background-color: #686de0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
-
-  #first-part {
-
-    margin-bottom: 10rem
+  &__item {
+    border: 2px solid black;
+    margin: 0 auto;
   }
-  // OPDRACHT 2. 
+}
 
-  .grid {
+.grid__item > img {
+  border: 2px solid green;
+  width: 25rem;
+}
 
-    background-color: yellow;
+//MEDIA QUERIES TABLET/IPAD
 
+@media only screen and (min-width: 768px) {
+  .grid__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "foto1 foto2"
+      "foto3 foto4"
+      "foto5 foto6"
+      "foto7";
   }
+}
+
+@media screen and (min-width: 320px) {
+  .testimonial {
+    max-width: 500px;
+  }
+}
+
+// MEDIA QUERIES DESKTOP
+@media only screen and (min-width: 1200px) {
+  .grid__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "foto1 foto2 foto3"
+      "foto4 foto5 foto6"
+      "foto7";
+  }
+}
