@@ -16,10 +16,12 @@ body {
 
 .assignment__header {
   text-align: center;
-  margin: 2rem;
+  margin: 5rem;
 }
 .assignment__header h2 {
-  font-size: 3.2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #686de0;
 }
 
 .test-wrapper {
@@ -32,32 +34,42 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
+  max-width: 50%;
   height: auto;
-  border: 2px solid black;
   border-radius: 20px;
   align-items: center;
   background-color: #fff;
+  font-size: 1.4rem;
 }
 .testimonial__header {
-  font-size: 1.8rem;
   text-align: justify;
-  padding: 5rem 2rem;
-  line-height: 1.6;
+  margin: 6rem 2.5rem;
+  line-height: 1.7;
 }
 .testimonial__footer {
-  position: relative;
-  padding-top: 10rem;
   width: 100%;
-  background-color: aqua;
+  background-color: #686de0;
+  border-radius: 0 0 20px 20px;
+  padding: 6rem 0 2rem 0;
+  position: relative;
+}
+.testimonial__footer #photo-me {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11rem;
+  height: auto;
+}
+.testimonial__text {
   text-align: center;
 }
-.testimonial__footer h3 {
-  font-size: 2rem;
+.testimonial__text h3 {
+  text-transform: uppercase;
+  color: #fff;
 }
-.testimonial__photo {
-  border-radius: 50%;
-  border: 8px solid #fff;
-  position: absolute;
-  width: 15rem;
+.testimonial__text span {
+  color: #c3cfe2;
 }/*# sourceMappingURL=style.css.map */

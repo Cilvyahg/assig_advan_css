@@ -7,6 +7,7 @@
 // variables
 
 $primary-font: "Manrope", sans-serif;
+$heading-clr: #686de0;
 
 * {
   margin: 0;
@@ -30,9 +31,12 @@ body {
 // ASSIGNMENT HEADER //
 .assignment__header {
   text-align: center;
-  margin: 2rem;
+  margin: 5rem;
+
   h2 {
-    font-size: 3.2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $heading-clr;
   }
 }
 
@@ -47,41 +51,47 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
+  max-width: 50%;
   height: auto;
-  border: 2px solid black;
   border-radius: 20px;
   align-items: center;
   background-color: #fff;
+  font-size: 1.4rem;
 
   &__header {
-    font-size: 1.8rem;
     text-align: justify;
-    padding: 5rem 2rem;
-    line-height: 1.6;
+    margin: 6rem 2.5rem;
+    line-height: 1.7;
   }
 
   &__footer {
-    position: relative;
-    padding-top: 10rem;
     width: 100%;
-    background-color: aqua;
+    background-color: $heading-clr;
+    border-radius: 0 0 20px 20px;
+    padding: 6rem 0 2rem 0;
+    position: relative;
 
-    text-align: center;
-
-    h3 {
-      font-size: 2rem;
+    & #photo-me {
+      border-radius: 50%;
+      border: 5px solid #fff;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 11rem;
+      height: auto;
     }
   }
 
-  &__photo {
-    border-radius: 50%;
-    border: 8px solid #fff;
-    // max-width: 20re
-    position: absolute;
-    width: 15rem;
-    // top: -60%;
-    // left: -17%;
-    // transform: translate(.50%, .50%)
+  &__text {
+    text-align: center;
+
+    h3 {
+      text-transform: uppercase;
+      color: #fff;
+    }
+    span {
+      color: #c3cfe2;
+    }
   }
 }
