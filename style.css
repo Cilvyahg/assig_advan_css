@@ -87,21 +87,20 @@ body {
   margin-bottom: 10rem;
 }
 
-.grid {
-  background-color: #686de0;
-}
 .grid__container {
   display: grid;
   grid-template-columns: 1fr;
-}
-.grid__item {
-  border: 2px solid black;
+  grid-gap: 2em;
+  width: 50%;
   margin: 0 auto;
 }
 
+.grid__item {
+  text-align: center;
+}
 .grid__item > img {
-  border: 2px solid green;
-  width: 25rem;
+  width: 20rem;
+  box-shadow: 2px 3px 5px #686de0;
 }
 
 @media only screen and (min-width: 768px) {
