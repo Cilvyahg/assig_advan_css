@@ -1,0 +1,87 @@
+// ==================
+// Global
+// ===================
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Merriweather:wght@300&display=swap");
+
+// variables
+
+$primary-font: "Manrope", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #c3cfe2;
+  list-style-type: none;
+}
+
+// ========================
+// Local
+// ========================
+
+// ASSIGNMENT HEADER //
+.assignment__header {
+  text-align: center;
+  margin: 2rem;
+  h2 {
+    font-size: 3.2rem;
+  }
+}
+
+//TESTIMONIAL
+
+.test-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.testimonial {
+  font-family: $primary-font;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 20px;
+  align-items: center;
+  background-color: #fff;
+
+  &__header {
+    font-size: 1.8rem;
+    text-align: justify;
+    padding: 5rem 2rem;
+    line-height: 1.6;
+  }
+
+  &__footer {
+    position: relative;
+    padding-top: 10rem;
+    width: 100%;
+    background-color: aqua;
+
+    text-align: center;
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  &__photo {
+    border-radius: 50%;
+    border: 8px solid #fff;
+    // max-width: 20re
+    position: absolute;
+    width: 15rem;
+    // top: -60%;
+    // left: -17%;
+    // transform: translate(.50%, .50%)
+  }
+}

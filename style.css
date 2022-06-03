@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Merriweather:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #c3cfe2;
+  list-style-type: none;
+}
+
+.assignment__header {
+  text-align: center;
+  margin: 2rem;
+}
+.assignment__header h2 {
+  font-size: 3.2rem;
+}
+
+.test-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 20px;
+  align-items: center;
+  background-color: #fff;
+}
+.testimonial__header {
+  font-size: 1.8rem;
+  text-align: justify;
+  padding: 5rem 2rem;
+  line-height: 1.6;
+}
+.testimonial__footer {
+  position: relative;
+  padding-top: 10rem;
+  width: 100%;
+  background-color: aqua;
+  text-align: center;
+}
+.testimonial__footer h3 {
+  font-size: 2rem;
+}
+.testimonial__photo {
+  border-radius: 50%;
+  border: 8px solid #fff;
+  position: absolute;
+  width: 15rem;
+}/*# sourceMappingURL=style.css.map */
