@@ -43,20 +43,30 @@ body {
   }
 }
 
-//TESTIMONIAL
+//OPDRACHT 1 : TESTIMONIAL
+
+#first-part {
+  margin-bottom: 10rem;
+}
+
 .testimonial {
-  width: 95%;
+  width: min(50rem, 80%);
   margin: 0 auto;
   font-family: $primary-font;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: auto;
   border-radius: 20px;
   align-items: center;
   background-color: #fff;
   font-size: 1.4rem;
   overflow: hidden;
+
+  // Modififier box shadow
+
+  &.--shadow {
+    box-shadow: 0px 7px 20px rgb(70, 70, 70);
+  }
 
   &__header {
     text-align: justify;
@@ -78,18 +88,15 @@ body {
       border-radius: 50%;
       border: 5px dashed #fff;
       position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      inset: 0 50% auto auto;
+      transform: translate(50%, -50%);
       width: 12rem;
-      height: auto;
-      // object-position: center;
     }
   }
 
   &__text {
     text-align: center;
-    padding: 7rem 0 2rem 0;
+    padding: 8rem 0 2rem 0;
 
     h3 {
       text-transform: uppercase;
@@ -104,32 +111,72 @@ body {
   }
 }
 
-.--shadow {
-  box-shadow: 0px 5px 20px rgb(125, 122, 122);
-}
+// OPDRACHT 2: PORTFOLIO GRID
 
-#first-part {
+#second-part{
   margin-bottom: 10rem;
 }
-
-// OPDRACHT 2.
 
 .grid__container {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2em;
-  width: 50%;
+  width: min(50%, 300rem);
   margin: 0 auto;
-}
 
-.grid__item {
-  text-align: center;
+  .grid__item {
+    text-align: center;
+    position: relative;
+   
+    
 
-  & > img {
-    width: 20rem;
-    box-shadow: 2px 3px 5px $heading-clr;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-shadow: 2px 2px 5px $heading-clr;
+      position: relative;
+    }
   }
 }
+
+.grid__item-cover {
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: rgb(82, 12, 53);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 500ms ease-out 10ms;
+
+  & > button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+
+    & a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
+}
+
+// Hover state + border radius 
+
+.grid__item:hover {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.grid__item-cover:hover {
+  opacity: 1;
+  border-radius: 10px;
+}
+
 
 //MEDIA QUERIES TABLET/IPAD
 
@@ -141,12 +188,6 @@ body {
       "foto3 foto4"
       "foto5 foto6"
       "foto7";
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .testimonial {
-    max-width: 500px;
   }
 }
 
