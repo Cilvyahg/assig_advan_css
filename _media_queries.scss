@@ -1,0 +1,45 @@
+
+//MEDIA QUERIES TABLET/IPAD
+
+@media only screen and (min-width: 768px) {
+  .grid__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "foto1 foto2"
+      "foto3 foto4"
+      "foto5 foto6"
+      "foto7";
+  }
+}
+
+// MEDIA QUERIES DESKTOP
+@media only screen and (min-width: 1200px) {
+  .grid__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "foto1 foto2 foto3"
+      "foto4 foto5 foto6"
+      "foto7";
+  }
+}
+
+// MEDIA QUERIES MOBILE : SOCIALE MEDIA BUTTONS
+@media only screen and (max-width: 568px) {
+  .social_media_wrapper {
+    width: 3.5rem;
+    margin-left: 9rem;
+    height: 2.5rem;
+
+    &:hover {
+      width: 12.5rem;
+    }
+
+    .icon-image {
+      width: 1.7rem;
+      margin: 1rem 1rem 1rem 1.2rem;
+    }
+    .social_media_text {
+      font-size: 0.9rem;
+    }
+  }
+}
