@@ -30,6 +30,8 @@ body {
 // Local
 // ========================
 
+
+
 // ASSIGNMENT HEADER //
 .assignment__header {
   text-align: center;
@@ -148,7 +150,7 @@ body {
 .grid__item-cover {
   position: absolute;
   inset: 0 0 0 0;
-  background-color: rgb(82, 12, 53);
+  background-color: rgb(58, 12, 39);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,11 +180,9 @@ body {
 }
 
 .grid__item-cover:hover {
-  opacity: 0.8;
+  opacity: 1;
   border-radius: 10px;
 }
-
-
 
 // OPDRACHT 3: Social Media Buttons
 
@@ -190,11 +190,10 @@ body {
   position: fixed;
   bottom: 30vh;
   right: 0;
-// width: 14rem;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-end;
-  
+  // width: 14rem;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: flex-end;
 }
 
 .social_media_wrapper {
@@ -207,25 +206,26 @@ body {
   justify-content: flex-start;
   align-items: center;
   height: 3rem;
+  cursor: pointer;
 
   &:hover {
     width: 14rem;
     margin-left: 0;
   }
+
+  .icon-image {
+    width: 2rem;
+    margin: 0 1rem 0 1.2rem;
+  }
+  .social_media_text {
+    font-size: 1rem;
+    font-family: $primary-font;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+  }
 }
 
-.icon-image {
-  width: 2rem;
-  margin: 0 1rem 0 1.2rem;
-}
-.social_media_text {
-  font-size: 1rem;
-  font-family: $primary-font;
-  margin-left: 0.5rem;
-  white-space: nowrap;
-}
-
-//background-color icons
+//BACKGROUND COLORS ICONS
 
 .--laptop {
   background-color: #e17b77;
@@ -240,7 +240,7 @@ body {
 }
 
 .--github {
-  background-color: #333;;
+  background-color: #333;
 }
 .--linkedin {
   background-color: #007bb6;
@@ -277,13 +277,11 @@ body {
 
 // MEDIA QUERIES MOBILE : SOCIALE MEDIA BUTTONS
 @media only screen and (max-width: 568px) {
-
-  
   .social_media_wrapper {
     width: 3.5rem;
     margin-left: 9rem;
     height: 2.5rem;
-  
+
     &:hover {
       width: 12.5rem;
     }
